@@ -8,14 +8,9 @@ logger = logging.getLogger("copilot.llm")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 MODEL_CHAIN = [
-    # 1. Ultra-cheap, extremely fast, highly reliable (fractions of a cent)
     "openai/gpt-4o-mini", 
-    
-    # 2. The most stable free model on OpenRouter
     "mistralai/mistral-7b-instruct:free", 
-    
-    # 3. Google's standard free tier 
-    "google/gemini-2.0-flash-exp:free" # (Leaving this in case it comes back online)
+    "google/gemini-2.0-flash-exp:free"
 ]
 
 

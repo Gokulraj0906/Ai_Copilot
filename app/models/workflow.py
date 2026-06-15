@@ -34,3 +34,17 @@ class Workflow(BaseModel):
     edges: list[Edge]
 
     model_config = {"populate_by_name": True}
+
+
+class NodeExecutionResult(BaseModel):
+    node_id: str
+    node_type: str
+    status: str  # "success" | "skipped" | "error"
+    output: dict[str, Any] = Field(default_factory=dict)
+    error: str | None = None
+
+
+class WorkflowExecutionResult(BaseModel):
+    workflow_id: str
+    status: str  # "completed" | "failed"
+    steps: list[NodeExecutionResult]

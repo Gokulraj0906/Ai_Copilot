@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 from app.db.database import get_db
 from app.db import repository
-from app.cache import check_rate_limit, get_cached_explanation, cache_explanation
+from app.cache import check_rate_limit, get_cached_explanation, cache_explanation, invalidate_explanation
 from app.deps import get_api_key
 from app.llm.client import LLMError
 import app.copilot as copilot
@@ -76,6 +76,7 @@ async def modify(
         raise HTTPException(status_code=503, detail="AI service is temporarily unavailable. Please try again.")
 
     await repository.update_workflow(db, req.workflow_id, workflow, is_valid=result.valid)
+    await invalidate_explanation(req.workflow_id)
     if req.session_id:
         await repository.append_session_message(db, req.session_id, "user", req.instruction)
 
@@ -104,6 +105,7 @@ async def fix(
         raise HTTPException(status_code=503, detail="AI service is temporarily unavailable. Please try again.")
 
     await repository.update_workflow(db, req.workflow_id, workflow, is_valid=result.valid)
+    await invalidate_explanation(req.workflow_id)
 
     return {
         "workflow": workflow.model_dump(by_alias=True),

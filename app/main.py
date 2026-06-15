@@ -6,14 +6,14 @@ from fastapi.responses import JSONResponse
 
 from app.cache import init_redis, close_redis, check_redis
 from app.db.database import check_db, engine
-from app.routes import copilot, workflows
+from app.routes import copilot, workflows, admin
 
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("app.log"),           
+        logging.FileHandler("app.log"),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -32,6 +32,7 @@ app = FastAPI(title="AI Workflow Copilot", lifespan=lifespan)
 
 app.include_router(copilot.router)
 app.include_router(workflows.router)
+app.include_router(admin.router)
 
 
 @app.exception_handler(Exception)
