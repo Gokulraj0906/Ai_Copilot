@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 commenst.txt
 .pytest_cache/
+
+/test/__pycache__/
+/test/conftest.py
