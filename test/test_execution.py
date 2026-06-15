@@ -1,6 +1,6 @@
 import pytest
 from app.models.workflow import Workflow
-from app.execution import execute_workflow
+from app.service.execution import execute_workflow
 
 WORKFLOW = {
     "name": "Send Slack Message on Email Arrival",

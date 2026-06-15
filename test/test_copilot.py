@@ -1,5 +1,5 @@
 import pytest
-import app.copilot as copilot
+import app.service.copilot as copilot
 from app.llm.client import LLMError
 
 VALID_WORKFLOW_JSON = {

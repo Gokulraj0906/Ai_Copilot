@@ -1,6 +1,6 @@
 from app.models.workflow import Workflow
 from app.models.validation import ValidationIssue, ValidationResult, Severity
-from app.catalog import get_catalog_entry, TRIGGER_TYPES
+from app.core.catalog import get_catalog_entry, TRIGGER_TYPES
 
 
 def validate_structural(workflow: Workflow) -> list[ValidationIssue]:

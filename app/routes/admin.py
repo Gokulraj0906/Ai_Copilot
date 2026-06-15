@@ -6,7 +6,7 @@ from fastapi import APIRouter, Query
 from pathlib import Path
 from datetime import datetime
 
-from app.log_analysis import parse_log_file, filter_since, analyze
+from app.service.log_analysis import parse_log_file, filter_since, analyze
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 

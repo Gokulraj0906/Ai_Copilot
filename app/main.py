@@ -4,7 +4,7 @@ import sys
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-from app.cache import init_redis, close_redis, check_redis
+from app.core.cache import init_redis, close_redis, check_redis
 from app.db.database import check_db, engine
 from app.routes import copilot, workflows, admin
 

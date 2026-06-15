@@ -1,7 +1,7 @@
 import httpx
 import logging
 from app.llm.parser import extract_json
-from app.config import settings
+from app.core.config import settings
 
 logger = logging.getLogger("copilot.llm")
 

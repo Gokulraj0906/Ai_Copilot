@@ -4,10 +4,10 @@ from pydantic import BaseModel
 
 from app.db.database import get_db
 from app.db import repository
-from app.cache import check_rate_limit, get_cached_explanation, cache_explanation, invalidate_explanation
-from app.deps import get_api_key
+from app.core.cache import check_rate_limit, get_cached_explanation, cache_explanation, invalidate_explanation
+from app.core.deps import get_api_key
 from app.llm.client import LLMError
-import app.copilot as copilot
+import app.service.copilot as copilot
 
 router = APIRouter(prefix="/copilot", tags=["copilot"])
 

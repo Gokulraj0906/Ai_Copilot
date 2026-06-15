@@ -1,5 +1,5 @@
 from app.models.workflow import Workflow, Node, Edge
-from app.validation import validate_workflow
+from app.service.validation import validate_workflow
 
 
 def test_valid_workflow():

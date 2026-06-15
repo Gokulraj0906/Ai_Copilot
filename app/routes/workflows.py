@@ -4,9 +4,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db.database import get_db
 from app.db import repository
 from app.models.workflow import Workflow
-from app.validation import validate_workflow
-from app.execution import execute_workflow
-from app.cache import (
+from app.service.validation import validate_workflow
+from app.service.execution import execute_workflow
+from app.core.cache import (
     invalidate_explanation,
     acquire_execution_lock,
     release_execution_lock,

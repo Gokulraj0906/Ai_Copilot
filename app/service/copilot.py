@@ -1,11 +1,11 @@
 from app.models.workflow import Workflow
 from app.models.validation import ValidationResult
-from app.validation import validate_workflow
+from app.service.validation import validate_workflow
 from app.llm.client import call_llm, LLMError
 from app.llm.prompts import (
     build_create_prompt, build_modify_prompt, build_fix_prompt, build_explain_prompt,
 )
-from app.catalog import CATALOG_PROMPT_TEXT
+from app.core.catalog import CATALOG_PROMPT_TEXT
 import logging
 
 logger = logging.getLogger("copilot.core")
