@@ -8,3 +8,103 @@
 2026-06-15 21:53:36,322 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-15 21:59:15,913 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-15 22:02:41,122 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-16 10:31:39,898 - copilot - ERROR - Unhandled error on /workflows: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\workflows.py", line 30, in list_workflows
+    records = await repository.list_workflows(db, limit, offset)
+  File "D:\Projects\Zoft_ai_task\app\db\repository.py", line 38, in list_workflows
+    result = await db.execute(select(WorkflowRecord).order_by(WorkflowRecord.created_at.desc()).limit(limit).offset(offset))
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 461, in execute
+    result = await greenlet_spawn(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2226, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2095, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 3276, in connect
+    return self._connection_cls(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 937, in connect
+    await_only(creator_fn(*arg, **kw)),
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 131, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connection.py", line 2329, in connect
+    return await connect_utils._connect(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 1017, in _connect
+    raise last_error or exceptions.TargetServerAttributeNotMatched(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 991, in _connect
+    conn = await _connect_addr(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 828, in _connect_addr
+    return await __connect_addr(params, True, *args)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 873, in __connect_addr
+    tr, pr = await connector
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 744, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 1084, in create_connection
+    raise OSError('Multiple exceptions: {}'.format(
+OSError: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)
