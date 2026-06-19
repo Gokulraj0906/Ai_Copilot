@@ -107,4 +107,4 @@ Traceback (most recent call last):
     tr, pr = await loop.create_connection(
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 1084, in create_connection
     raise OSError('Multiple exceptions: {}'.format(
-OSError: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)
+OSError: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)2026-06-19 14:22:38,062 - copilot.core - INFO - Out-of-scope instruction: 'I need help with GST tax filing for my business'
