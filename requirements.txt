@@ -10,3 +10,9 @@ alembic==1.13.1
 pytest==8.2.0
 pytest-asyncio==0.23.7
 openrouter
+cryptography
+requests
+pwdlib[argon2]
+jose
+python-jose[cryptography]
+bcrypt

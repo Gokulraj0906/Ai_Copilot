@@ -110,3 +110,540 @@ Traceback (most recent call last):
 OSError: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)2026-06-19 14:22:38,062 - copilot.core - INFO - Out-of-scope instruction: 'I need help with GST tax filing for my business'
 2026-06-19 20:27:06,453 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-19 20:27:12,501 - copilot.llm - INFO - LLM success with model=openai/gpt-4o-mini
+2026-06-26 19:39:09,687 - copilot - INFO - Redis connected
+2026-06-26 19:39:41,556 - copilot - INFO - Shutdown complete
+2026-06-26 19:39:47,476 - copilot - INFO - Redis connected
+2026-06-26 19:40:20,741 - copilot - ERROR - Unhandled error on /webhooks/gmail: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\webhooks.py", line 351, in gmail_webhook
+    body = await request.json()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\requests.py", line 252, in json
+    self._json = json.loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-26 19:41:21,027 - copilot - INFO - Shutdown complete
+2026-06-26 20:20:17,760 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-26 20:20:17,760 - copilot - INFO - Redis connected
+2026-06-26 20:20:59,316 - copilot - INFO - Shutdown complete
+2026-06-26 20:23:39,988 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-26 20:23:39,989 - copilot - INFO - Redis connected
+2026-06-26 20:25:17,743 - copilot - ERROR - Unhandled error on /auth/register: bcrypt: no backends available -- recommend you install one (e.g. 'pip install bcrypt')
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\auth.py", line 39, in register
+    user = UserRecord(email=req.email, hashed_password=hash_password(req.password))
+  File "D:\Projects\Zoft_ai_task\app\core\auth.py", line 37, in hash_password
+    return _pwd.hash(password)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2176, in set_backend
+    raise default_error
+passlib.exc.MissingBackendError: bcrypt: no backends available -- recommend you install one (e.g. 'pip install bcrypt')
+2026-06-26 20:25:25,345 - copilot - INFO - Shutdown complete
+2026-06-26 20:26:18,049 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-26 20:26:18,049 - copilot - INFO - Redis connected
+2026-06-26 20:26:49,643 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-26 20:26:49,651 - copilot - ERROR - Unhandled error on /auth/register: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\auth.py", line 39, in register
+    user = UserRecord(email=req.email, hashed_password=hash_password(req.password))
+  File "D:\Projects\Zoft_ai_task\app\core\auth.py", line 37, in hash_password
+    return _pwd.hash(password)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2026-06-26 20:27:06,809 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-26 20:27:06,820 - copilot - ERROR - Unhandled error on /auth/register: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\auth.py", line 39, in register
+    user = UserRecord(email=req.email, hashed_password=hash_password(req.password))
+  File "D:\Projects\Zoft_ai_task\app\core\auth.py", line 37, in hash_password
+    return _pwd.hash(password)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2026-06-26 20:27:23,715 - copilot - INFO - Shutdown complete
+2026-06-26 20:28:46,134 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-26 20:28:46,134 - copilot - INFO - Redis connected
+2026-06-26 20:28:52,564 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-06-26 20:28:52,571 - copilot - ERROR - Unhandled error on /auth/register: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\auth.py", line 39, in register
+    user = UserRecord(email=req.email, hashed_password=hash_password(req.password))
+  File "D:\Projects\Zoft_ai_task\app\core\auth.py", line 37, in hash_password
+    return _pwd.hash(password)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 779, in hash
+    self.checksum = self._calc_checksum(secret)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 626, in _load_backend_mixin
+    return mixin_cls._finalize_backend_mixin(name, dryrun)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 421, in _finalize_backend_mixin
+    if detect_wrap_bug(IDENT_2A):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 380, in detect_wrap_bug
+    if verify(secret, bug_hash):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\utils\handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\passlib\handlers\bcrypt.py", line 655, in _calc_checksum
+    hash = _bcrypt.hashpw(secret, config)
+ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2026-06-26 20:31:01,295 - copilot - INFO - Shutdown complete
+2026-06-26 20:37:42,469 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-26 20:37:42,470 - copilot - INFO - Redis connected
+2026-06-26 20:39:56,674 - copilot - INFO - Shutdown complete
+2026-06-26 20:53:36,930 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-26 20:53:36,930 - copilot - INFO - Redis connected
+2026-06-26 20:55:54,071 - copilot - ERROR - Unhandled error on /webhooks/gmail: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\webhooks.py", line 351, in gmail_webhook
+    body = await request.json()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\requests.py", line 252, in json
+    self._json = json.loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-26 20:56:12,540 - copilot - INFO - Shutdown complete
+2026-06-27 20:11:35,572 - copilot - CRITICAL - ENCRYPTION_MASTER_KEY is missing or invalid. Generate with: python -c "import secrets; print(secrets.token_hex(32))" and add to .env
+2026-06-27 20:11:35,572 - copilot - INFO - Redis connected
+2026-06-27 20:13:13,144 - copilot - ERROR - Unhandled error on /webhooks/gmail: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\webhooks.py", line 351, in gmail_webhook
+    body = await request.json()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\requests.py", line 252, in json
+    self._json = json.loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-27 20:13:14,530 - copilot - ERROR - Unhandled error on /webhooks/gmail: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\webhooks.py", line 351, in gmail_webhook
+    body = await request.json()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\requests.py", line 252, in json
+    self._json = json.loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-06-27 20:13:34,818 - copilot - INFO - Shutdown complete
+2026-06-27 20:26:12,107 - copilot - INFO - Redis connected
+2026-06-27 20:31:36,301 - copilot - ERROR - Unhandled error on /auth/login: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)
+Traceback (most recent call last):
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "D:\Projects\Zoft_ai_task\app\routes\auth.py", line 50, in login
+    result = await db.execute(select(UserRecord).where(UserRecord.email == req.email))
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 461, in execute
+    result = await greenlet_spawn(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2226, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2095, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 3276, in connect
+    return self._connection_cls(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 937, in connect
+    await_only(creator_fn(*arg, **kw)),
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 131, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connection.py", line 2329, in connect
+    return await connect_utils._connect(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 1017, in _connect
+    raise last_error or exceptions.TargetServerAttributeNotMatched(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 991, in _connect
+    conn = await _connect_addr(
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 828, in _connect_addr
+    return await __connect_addr(params, True, *args)
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 873, in __connect_addr
+    tr, pr = await connector
+  File "D:\Projects\Zoft_ai_task\.venv\lib\site-packages\asyncpg\connect_utils.py", line 744, in _create_ssl_connection
+    tr, pr = await loop.create_connection(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 1084, in create_connection
+    raise OSError('Multiple exceptions: {}'.format(
+OSError: Multiple exceptions: [Errno 10061] Connect call failed ('::1', 5433, 0, 0), [Errno 10061] Connect call failed ('127.0.0.1', 5433)
+2026-06-27 20:34:35,254 - copilot.credentials - INFO - Credential upserted: user=b4ecc7a7-e7ae-4dc8-b32e-8c901354cb83 service=smtp key=user
+2026-06-27 20:36:43,259 - copilot.credentials - INFO - Credential upserted: user=b4ecc7a7-e7ae-4dc8-b32e-8c901354cb83 service=smtp key=password
+2026-06-27 20:40:15,865 - copilot - INFO - Shutdown complete
+2026-06-27 20:40:33,335 - copilot - INFO - Redis connected
+2026-06-27 20:40:56,465 - copilot.credentials - INFO - Credential upserted: user=b4ecc7a7-e7ae-4dc8-b32e-8c901354cb83 service=smtp key=from
+2026-06-27 20:42:36,751 - copilot - INFO - Shutdown complete
+2026-06-27 20:42:47,361 - copilot - INFO - Redis connected
+2026-06-27 20:48:09,310 - copilot - INFO - Shutdown complete
+2026-06-27 20:48:10,952 - copilot - INFO - Redis connected
+2026-06-27 20:48:12,653 - copilot - INFO - Redis connected
+2026-06-27 20:52:36,351 - copilot - INFO - Shutdown complete
+2026-06-27 20:52:37,889 - copilot - INFO - Redis connected
+2026-06-27 20:52:39,392 - copilot - INFO - Redis connected
+2026-06-27 20:52:56,266 - copilot - INFO - Shutdown complete
